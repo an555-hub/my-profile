@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aimy 案B 旅程</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+:root{
+  --bg:#fcfcfb; --paper:#ffffff; --ink:#1a1c20; --muted:#5d6068; --line:#dcdde0; --accent:#2b44b0;
+  --mono:"DM Mono",ui-monospace,Menlo,monospace;
+  --disp:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#121317; --paper:#1a1c21; --ink:#ececef; --muted:#a4a7b0; --line:#30333a; --accent:#8fa2ff; color-scheme:dark;}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.85;padding-inline:20px}
+.wrap{max-width:760px;margin-inline:auto;padding-block:56px 88px;display:flex;flex-direction:column;gap:64px}
+.tag{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+header{display:flex;flex-direction:column;gap:14px}
+.name{font-family:var(--disp);font-weight:700;font-size:clamp(64px,17vw,132px);line-height:.9;letter-spacing:-.04em;margin:0}
+.name .dot{color:var(--accent)}
+.role{font-size:20px;font-weight:700;margin:0}
+.lead{color:var(--muted);margin:0}
+.codes{font-family:var(--mono);font-size:15px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;color:var(--ink)}
+.codes i{font-style:normal;color:var(--accent)}
+section{display:flex;flex-direction:column;gap:20px}
+h2{margin:0;display:flex;align-items:baseline;gap:14px;font-size:22px;font-weight:700}
+h2 .tag{font-weight:400}
+.svc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.svc li{background:var(--paper);padding:18px 18px 20px;display:flex;flex-direction:column;gap:6px}
+.svc li .tag{color:var(--accent)}
+.trip{list-style:none;margin:0;padding:0;position:relative;display:flex;flex-direction:column;gap:22px}
+.trip::before{content:"";position:absolute;left:5px;top:10px;bottom:10px;border-left:2px dotted var(--muted)}
+.trip li{position:relative;padding-left:32px;display:flex;flex-direction:column}
+.trip li::before{content:"";position:absolute;left:0;top:9px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.trip li:last-child::before{background:var(--accent)}
+.trip .tag{color:var(--accent)}
+.works{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.works li{border-bottom:1px solid var(--line);padding-block:12px}
+.pass{background:var(--paper);border:1px solid var(--line);border-radius:18px;display:grid;grid-template-columns:1fr auto;overflow:hidden}
+.pass .main{padding:28px;display:flex;flex-direction:column;gap:14px}
+.pass .stub{border-left:2px dashed var(--line);padding:28px 24px;display:flex;flex-direction:column;justify-content:center;gap:4px;font-family:var(--mono);font-size:13px;color:var(--muted);position:relative}
+.pass .stub::before,.pass .stub::after{content:"";position:absolute;left:-12px;width:22px;height:22px;border-radius:50%;background:var(--bg);border:1px solid var(--line)}
+.pass .stub::before{top:-12px}.pass .stub::after{bottom:-12px}
+.pass .stub b{font-family:var(--disp);font-size:28px;color:var(--ink)}
+.pass p{margin:0;font-size:22px;font-weight:700}
+.mail{display:inline-flex;align-items:center;gap:10px;min-height:54px;padding:12px 24px;border-radius:12px;background:var(--accent);color:#fff;text-decoration:none;font-weight:500;align-self:flex-start;transition:transform .2s}
+.mail:hover{transform:translateX(4px)}
+.mail:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+@media (prefers-color-scheme:dark){.mail{color:#111}}
+.addr{font-family:var(--mono);font-size:14px;color:var(--muted);user-select:all}
+@media (max-width:520px){.pass{grid-template-columns:1fr}.pass .stub{border-left:0;border-top:2px dashed var(--line);flex-direction:row;align-items:baseline;gap:12px}.pass .stub::before,.pass .stub::after{display:none}}
+footer{font-family:var(--mono);font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <span class="tag">Wellness / Consulting / Freelance</span>
+    <h1 class="name">Aimy<span class="dot">.</span></h1>
+    <p class="role">旅するウェルネスデザイナー</p>
+    <p class="lead">フリーランスで、ウェルネスを中心としたコンサルティングをしています。</p>
+    <div class="codes" aria-label="これまでの道のり">UK <i>→</i> WORLD <i>→</i> VN <i>→</i> JP</div>
+  </header>
+
+  <section>
+    <h2>できること <span class="tag">Service</span></h2>
+    <ul class="svc">
+      <li><span class="tag">Process</span>話を聞くところから、業務の整理・課題の洗い出し・改善策の設計と実行まで一貫して対応</li>
+      <li><span class="tag">Operation</span>業務の流れづくりと改善、コスト削減</li>
+      <li><span class="tag">Launch</span>新しい事業や組織の立ち上げと、その後の成長の支援</li>
+      <li><span class="tag">Global</span>海外展開の支援（特にベトナム・東南アジア、ウェルネス・IT分野）</li>
+      <li><span class="tag">Office &amp; Event</span>事務局の運営、イベントの企画・開催、営業の支援</li>
+      <li><span class="tag">Motto</span>Tomorrow is Another day ／ GLOBAL × LOCAL</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>これまでの旅程 <span class="tag">Route</span></h2>
+    <ol class="trip">
+      <li><span class="tag">UK → World</span>イギリスに留学し、その後、世界を巡る旅へ</li>
+      <li><span class="tag">2011 · Vietnam</span>ベトナムで起業（ウェルネス分野）</li>
+      <li><span class="tag">2016 · Japan</span>日本へ帰国</li>
+      <li><span class="tag">Now</span>BPO企業の執行役員 兼 事業開発本部長</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>実績 <span class="tag">Works</span></h2>
+    <ul class="works">
+      <li>社団法人の支援（大使館が後援したフォーラムの開催など）</li>
+      <li>海外の医学団体による、日本企業との商談会の支援（2023年10月）</li>
+      <li>海外の外郭団体による、日本視察ツアーのとりまとめ（2023年9月）</li>
+      <li>女性を応援するアワードの事務局</li>
+      <li>行政や小売業のデジタル化プロジェクトの管理支援</li>
+    </ul>
+  </section>
+
+  <section class="pass" aria-label="お問い合わせ">
+    <div class="main">
+      <span class="tag">Contact</span>
+      <p>まずはお話しましょう！</p>
+      <a class="mail" href="mailto:rakasinfo@gmail.com">メールで相談する →</a>
+      <span class="addr">rakasinfo@gmail.com</span>
+    </div>
+    <div class="stub" aria-hidden="true"><span>TO</span><b>Aimy</b><span>GLOBAL × LOCAL</span></div>
+  </section>
+
+  <footer>Let's create together.</footer>
+</main>
+</body>
+</html>
